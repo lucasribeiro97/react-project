@@ -9,6 +9,8 @@ import { booksList, bestMovie } from './data';
 
 import interestelar from './assets/interestelar.jpeg';
 
+import { AiOutlineMail } from 'react-icons/ai';
+
 function App() {
   return (
     <div className="app">
@@ -36,6 +38,7 @@ function App() {
           <img src="/interstellar-public.jpg" alt="#" />
         </div>
       </div>
+      <AiOutlineMail />
       <Footer />
     </div>
   );
