@@ -7,6 +7,8 @@ import './App.css';
 
 import { booksList, bestMovie } from './data';
 
+import interestelar from './assets/interestelar.jpeg';
+
 function App() {
   return (
     <div className="app">
@@ -24,9 +26,15 @@ function App() {
             />
           ))}
         </ul>
+
         <Title>
           {bestMovie}
         </Title>
+
+        <div className="images-container">
+          <img src={ interestelar } alt="#" />
+          <img src="/interstellar-public.jpg" alt="#" />
+        </div>
       </div>
       <Footer />
     </div>
