@@ -3,6 +3,8 @@ import Footer from './components/footer';
 import Book from './components/book';
 import Title from './components/title';
 
+import './App.css';
+
 const booksList = [
   {
     title: 'The Godfather',
@@ -38,20 +40,22 @@ const booksList = [
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Header />
-      <Title>
-        <s>Livros emprestados</s>
-        Meus Livros:
-      </Title>
-      <ul>
-        {booksList.map((book) => (
-          <Book
-            key={ book.title }
-            book={ book }
-          />
-        ))}
-      </ul>
+      <div className="container">
+        <Title>
+          <s>Livros emprestados</s>
+          Meus Livros:
+        </Title>
+        <ul className="books-list">
+          {booksList.map((book) => (
+            <Book
+              key={book.title}
+              book={book}
+            />
+          ))}
+        </ul>
+      </div>
       <Footer />
     </div>
   );
