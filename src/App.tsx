@@ -5,38 +5,7 @@ import Title from './components/title';
 
 import './App.css';
 
-const booksList = [
-  {
-    title: 'The Godfather',
-    pages: 433,
-    isRead: true,
-    isFavorite: false,
-  },
-  {
-    title: 'The Little Prince',
-    pages: 92,
-    isRead: true,
-    isFavorite: true,
-  },
-  {
-    title: 'Clean Code',
-    pages: 425,
-    isRead: false,
-    isFavorite: false,
-  },
-  {
-    title: 'Dom Casmurro',
-    pages: 192,
-    isRead: true,
-    isFavorite: false,
-  },
-  {
-    title: 'Vidas Secas',
-    pages: 176,
-    isRead: true,
-    isFavorite: false,
-  },
-];
+import { booksList, bestMovie } from './data';
 
 function App() {
   return (
@@ -50,11 +19,14 @@ function App() {
         <ul className="books-list">
           {booksList.map((book) => (
             <Book
-              key={book.title}
-              book={book}
+              key={ book.title }
+              book={ book }
             />
           ))}
         </ul>
+        <Title>
+          {bestMovie}
+        </Title>
       </div>
       <Footer />
     </div>
