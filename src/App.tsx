@@ -1,43 +1,56 @@
 import Header from './components/header';
 import Footer from './components/footer';
 import Book from './components/book';
+import Title from './components/title';
 
-const book1 = {
-  title: 'The Godfather',
-  pages: 433,
-  isRead: true,
-  isFavorite: false,
-};
-
-const book2 = {
-  title: 'The Little Prince',
-  pages: 92,
-  isRead: true,
-  isFavorite: true,
-};
-
-const book3 = {
-  title: 'Clean Code',
-  pages: 425,
-  isRead: false,
-  isFavorite: false,
-};
+const booksList = [
+  {
+    title: 'The Godfather',
+    pages: 433,
+    isRead: true,
+    isFavorite: false,
+  },
+  {
+    title: 'The Little Prince',
+    pages: 92,
+    isRead: true,
+    isFavorite: true,
+  },
+  {
+    title: 'Clean Code',
+    pages: 425,
+    isRead: false,
+    isFavorite: false,
+  },
+  {
+    title: 'Dom Casmurro',
+    pages: 192,
+    isRead: true,
+    isFavorite: false,
+  },
+  {
+    title: 'Vidas Secas',
+    pages: 176,
+    isRead: true,
+    isFavorite: false,
+  },
+];
 
 function App() {
   return (
     <div>
       <Header />
-      <p>Meus livros:</p>
+      <Title>
+        <s>Livros emprestados</s>
+        Meus Livros:
+      </Title>
       <ul>
-        <Book
-          book={ book1 }
-        />
-        <Book
-          book={ book2 }
-        />
-        <Book
-          book={ book3 }
-        />
+        {booksList.map((book) => (
+          <Book
+            key={ book.title }
+            book={ book }
+          />
+        ))}
       </ul>
       <Footer />
     </div>
