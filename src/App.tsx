@@ -5,27 +5,35 @@ import Button from './components/button';
 import './App.css';
 
 function App() {
-  function handleButton1() {
-    alert('Botao 1 clicado!');
+  function handleClick(messageText: string) {
+    alert(messageText);
   }
-  function handleButton2() {
-    alert('Botao 2 clicado!');
+
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+    console.log(event.target.value);
   }
+
   return (
     <div className="app">
       <Header />
       <div className="container">
         <Button
-          onClick={ handleButton1 }
+          onClick={ () => handleClick('Botao 1') }
         >
           Botao 1
         </Button>
 
         <Button
-          onClick={ handleButton2 }
+          onClick={ () => handleClick('Botao 2') }
         >
           Botao 2
         </Button>
+
+        <input
+          type="text"
+          onChange={ (event) => handleChange(event) }
+        />
+
       </div>
       <Footer />
     </div>
