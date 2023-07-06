@@ -13,6 +13,10 @@ function App() {
     console.log(event.target.value);
   }
 
+  function doubleNumber(numberList: Array<number>) {
+    return numberList.map((num) => num * 2);
+  }
+
   return (
     <div className="app">
       <Header />
