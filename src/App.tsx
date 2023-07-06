@@ -4,10 +4,6 @@ import Footer from './components/footer';
 import './App.css';
 
 function App() {
-  function handleClick() {
-    alert('Botao clicado');
-  }
-
   return (
     <div className="app">
       <Header />
